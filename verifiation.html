@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link href="verification.css" rel="stylesheet">
+  </head>
+  <body>
+    <main class="card" aria-label ledby="otp-heading">
+      <h1 id="otp-heading">Verify your account</h1>
+      <p>Enter the 6-digit code we sent to 
+      <strong>+2547 **** 1264</strong>
+      </p>
+
+      <form id="otp-heading">
+        <div class="otp-grid" role="group" aria-label="Enter verification code">
+          <input inputmode="numeric" class="otp-box" pattern="[0-9]">
+          <input class="otp-box" inputmode="numeric" pattern="[0-9]">
+          <input class="otp-box" inputmode="numeric" pattern="[0-9]">
+          <input class="otp-box" inputmode="numeric" pattern="[0-9]">
+          <input class="otp-box" inputmode="numeric" pattern="[0-9]">
+          <input class="otp-box" inputmode="numeric" pattern="[0-9]">
+        </div>
+        <div class="controls">
+          <button type="button" id="verification" class="primary">
+            verify
+          </button>
+          <button type="button" id="resendBtn" class="ghost">
+            Resend code
+          </button>
+        </div>
+        <div class="message" id="message">
+          You can request a new code in <span id="timer">30</span>
+        </div>
+      </form>
+    </main>
+  </body>
+  <script src="verification.js">
+  </script>
+</html>

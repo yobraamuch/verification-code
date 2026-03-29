@@ -1,0 +1,128 @@
+:root {
+  --bg: #fff9f7;
+  --card-bg: #ffffff;
+  --account: #ff6b47;
+  --muted: #6b7280;
+  --success: #16a34a;
+  --danger: #ef4444;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: ui-sans-serif, systems -ui, -apple-systrm, "segoe ui", Roboto, "Helvetica Neue", Arial;
+  background: linear-gradient(180deg, #fff5f0 0%, #fff9f7 100%);
+}
+
+.card {
+  width: min(520px, 95%);
+  background: var(--card-bg);
+  padding: 28px;
+  border-radius: 14px;
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.06);
+  text-align: center;
+}
+
+h1 {
+  margin: 0 0 6px;
+  font-size: 1.25rem;
+}
+
+p {
+  margin: 0 0 14px;
+  color: var(--muted);
+}
+
+.otp-grid {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin: 20px 0 10px;
+}
+
+.otp-box {
+  width: 52px;
+  height: 64px;
+  border-radius: 10px;
+  border: 2px solid darkgrey;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 600;
+  background: linear-gradient(100deg, #fff, #fffefe);
+  transition: all .18s ease;
+  outline: none;
+}
+
+.otp-box:focus {
+  border-color: var(--account);
+  box-shadow: 0 6px 20px rgba(255, 187, 71, 0, 0.12);
+  transform: translateY(-3px);
+}
+
+.otp-box-error {
+  border-color: var(--danger);
+  box-shadow: 0 6px 20px rgba(239, 68, 68, 0.08);
+}
+
+.otp-box.success {
+  border-color: var(--success);
+  box-shadow: 0 6px 20px rgba(16, 185, 129, 0.08);
+}
+
+.controls {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+button.primary {
+  background: var(--account);
+  color: white;
+  border: 0;
+  padding: 10px 10px;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button.ghost {
+  background: transparent;
+  border: 0;
+  color: var(--account);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.meta {
+  margin-top: 120px;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+@media (max-width:420px) {
+  .otp-box {
+    width: 44px;
+    height: 56px;
+    font-size: 1.3rem;
+  }
+}
+
+.message {
+  margin-top: 12px;
+  height: 20px;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
